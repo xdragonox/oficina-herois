@@ -161,14 +161,25 @@
             color: var(--cyan);
         }
 
+        .hero-lead {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            max-width: 480px;
+            margin: 0 auto 12px;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.38s forwards;
+        }
+
         .hero-sub {
             font-size: 16px;
             color: rgba(255,255,255,0.72);
             max-width: 480px;
             margin: 0 auto 22px;
-            line-height: 1.65;
+            line-height: 1.7;
             opacity: 0;
-            animation: fadeUp 0.7s 0.38s forwards;
+            animation: fadeUp 0.7s 0.48s forwards;
         }
 
         .hero-meta {
@@ -178,7 +189,7 @@
             gap: 8px 18px;
             margin-bottom: 28px;
             opacity: 0;
-            animation: fadeUp 0.7s 0.48s forwards;
+            animation: fadeUp 0.7s 0.58s forwards;
         }
         .meta-chip {
             display: inline-flex;
@@ -285,6 +296,7 @@
                 max-width: 420px;
             }
             .hero h1 { font-size: 54px; }
+            .hero-lead { margin: 0 0 12px; }
             .hero-sub { margin: 0 0 22px; }
         }
 
@@ -958,10 +970,14 @@
                      class="hero-logo"
                      fetchpriority="high">
 
-                <h1>Em uma manhã você faz<br>seus próprios<br><em>Heróis em Feltro.</em><br><strong>Sem costurar.</strong></h1>
+                <h1>Esses heróis foram feitos em feltro.<br><em>Sem costurar</em> <strong>um único ponto.</strong></h1>
+
+                <p class="hero-lead">
+                    Parece difícil. Parece que precisa de jeito. Parece que não é pra você. Não precisa.
+                </p>
 
                 <p class="hero-sub">
-                    Aprenda com o criador do Método Feltro Sem Costura. Passo a passo, do zero, sem agulha e sem linha. Qualquer pessoa consegue.
+                    No sábado, dia 27, você aprende o passo a passo ao vivo com o Johnatan Corrêa. Três projetos diferentes, do zero. Sem agulha, sem linha e sem experiência anterior.
                 </p>
 
                 <div class="hero-meta">
@@ -997,8 +1013,8 @@
 
             <!-- IMAGE — right on desktop -->
             <div class="hero-image">
-                <img src="./Fotos/Herois/jc+herois_final.webp"
-                     alt="Johnatan Corrêa com os heróis em feltro"
+                <img src="./Fotos/Herois/herois_juntos_sem_jc.webp"
+                     alt="Heróis em feltro sem costura: Batman, Homem-Aranha, Superman e Mulher Maravilha"
                      fetchpriority="high">
             </div>
 
@@ -1012,9 +1028,11 @@
 <section class="objecao">
     <div class="container">
         <p class="obj-resposta">
-            Não precisa de jeito.<br>
-            Não precisa de experiência.<br>
-            <em>Qualquer pessoa consegue.</em>
+            3 projetos. 3 horas.<br>
+            <em>Ao vivo. Sábado, dia 27.</em>
+        </p>
+        <p class="obj-duvida" style="margin-top: 10px; font-size: 16px; color: rgba(0,0,0,0.55);">
+            Do zero. Sem agulha. Sem experiência. Por apenas <strong style="color: var(--red);">R$19,90.</strong>
         </p>
     </div>
 </section>
