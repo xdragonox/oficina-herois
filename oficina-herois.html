@@ -257,6 +257,7 @@
 
         /* IMAGE SIDE */
         .hero-image {
+            position: relative;
             width: 100%;
             max-width: 480px;
             opacity: 0;
@@ -266,6 +267,50 @@
             width: 100%;
             border-radius: 20px;
             box-shadow: 6px 6px 0 var(--yellow), 10px 10px 0 var(--red);
+        }
+        .hero-badge-circle {
+            position: absolute;
+            bottom: -14px;
+            right: -14px;
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, #FF8C00, #FF5500);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(255,85,0,0.55), 0 0 0 3px #fff;
+            z-index: 10;
+            text-align: center;
+            line-height: 1.15;
+            animation: badge-pop 0.6s 1.1s both;
+        }
+        .hero-badge-circle .badge-line1 {
+            font-family: var(--font-d);
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            color: #fff;
+        }
+        .hero-badge-circle .badge-price {
+            font-family: var(--font-d);
+            font-size: 22px;
+            letter-spacing: 0.02em;
+            color: #fff;
+            line-height: 1;
+        }
+        @keyframes badge-pop {
+            from { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+            to   { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+        @media (min-width: 768px) {
+            .hero-badge-circle {
+                width: 112px;
+                height: 112px;
+                bottom: -18px;
+                right: -18px;
+            }
+            .hero-badge-circle .badge-price { font-size: 26px; }
         }
 
         @keyframes fadeUp {
@@ -973,7 +1018,7 @@
                 <h1>Esses heróis foram feitos<br>em feltro, <em>sem precisar</em><br><strong>costurar nadinha.</strong></h1>
 
                 <p class="hero-sub">
-                    Acredite, é muito mais fácil do que você imagina. No sábado, dia 27, você vai aprender o passo a passo de 3 peças diferentes para fazer da sua casa. Sem linha, sem agulha e sem precisar de experiência.
+                    <strong>Acredite, é muito mais fácil do que você imagina.</strong> No sábado, dia 27, você vai aprender o passo a passo de 3 peças diferentes para fazer da sua casa. Sem linha, sem agulha e sem precisar de experiência.
                 </p>
 
                 <div class="hero-meta">
@@ -1009,6 +1054,10 @@
                 <img src="./Fotos/Herois/herois_juntos_sem_jc.webp"
                      alt="Heróis em feltro sem costura: Batman, Homem-Aranha, Superman e Mulher Maravilha"
                      fetchpriority="high">
+                <div class="hero-badge-circle">
+                    <span class="badge-line1">SÓ HOJE</span>
+                    <span class="badge-price">R$19,90</span>
+                </div>
             </div>
 
         </div>
@@ -1067,10 +1116,6 @@
         </div>
 
         <div class="cta-wrapper reveal" style="margin-top: 32px;">
-            <div class="gallery-price-tag">
-                Tudo isso por apenas <strong>&nbsp;R$19,90</strong>
-            </div>
-            <br>
             <a href="https://pay.hotmart.com/O106166138T?off=2khzi9i4&checkoutMode=10" class="cta-btn" id="cta-galeria" data-cta="galeria">
                 🔥 QUERO FAZER ESSES HERÓIS POR R$19,90
             </a>
