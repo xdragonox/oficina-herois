@@ -551,6 +551,73 @@
         .aprende .cta-wrapper { margin-top: 28px; }
 
         /* ============================================
+           SEÇÃO CHAVEIRINHOS
+           ============================================ */
+        .chaveiros-section {
+            background: #1A0B30;
+            padding: 64px 0;
+            text-align: center;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 22px 22px;
+        }
+        .chaveiros-section-head {
+            margin-bottom: 36px;
+        }
+        .chaveiros-section-head h2 {
+            font-family: var(--font-d);
+            font-size: 36px;
+            letter-spacing: 0.02em;
+            color: var(--white);
+            line-height: 1.08;
+        }
+        .chaveiros-section-head h2 em {
+            font-style: normal;
+            color: var(--yellow);
+        }
+        .chaveiros-big-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 500px;
+            margin: 0 auto 36px;
+        }
+        /* 5th item: center it alone on mobile */
+        .chaveiros-big-grid .chaveiro-big-img:nth-child(5) {
+            grid-column: 1 / -1;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+        .chaveiro-big-img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #F5F5F5;
+            padding: 14px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+        .chaveiro-big-img:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 14px 36px rgba(0,0,0,0.55);
+        }
+        @media (min-width: 768px) {
+            .chaveiros-section { padding: 80px 0; }
+            .chaveiros-section-head h2 { font-size: 48px; }
+            .chaveiros-big-grid {
+                grid-template-columns: repeat(5, 1fr);
+                max-width: 100%;
+                gap: 22px;
+                margin-bottom: 44px;
+            }
+            .chaveiros-big-grid .chaveiro-big-img:nth-child(5) {
+                grid-column: auto;
+                max-width: none;
+                margin: 0;
+            }
+        }
+
+        /* ============================================
            QUEBRA DE OBJEÇÃO
            ============================================ */
         .objecao {
@@ -944,10 +1011,6 @@
      =============================== -->
 <section class="objecao">
     <div class="container">
-        <p class="obj-duvida">
-            Parece difícil de fazer sem costura?<br>
-            Parece que só quem tem jeito consegue?
-        </p>
         <p class="obj-resposta">
             Não precisa de jeito.<br>
             Não precisa de experiência.<br>
@@ -962,7 +1025,6 @@
 <section class="galeria" id="galeria">
     <div class="container">
         <div class="section-head reveal">
-            <div class="label cyan">O QUE VOCÊ VAI CRIAR</div>
             <h2>Os heróis mais amados,<br>feitos por <em>você</em></h2>
         </div>
 
@@ -1049,14 +1111,7 @@
 
                 <div class="bonus-block">
                     <span class="bonus-badge">🎁 BÔNUS INCLUSO</span>
-                    <p class="bonus-text">Como fazer Chaveirinhos dos Heróis que encantam a todos</p>
-                </div>
-                <div class="chaveiros-grid">
-                    <img src="./Fotos/Chaveiros/batman.png" alt="Chaveiro Batman" class="chaveiro-img" loading="lazy">
-                    <img src="./Fotos/Chaveiros/Ironman.png" alt="Chaveiro Iron Man" class="chaveiro-img" loading="lazy">
-                    <img src="./Fotos/Chaveiros/Miranha.png" alt="Chaveiro Homem-Aranha" class="chaveiro-img" loading="lazy">
-                    <img src="./Fotos/Chaveiros/Capitao%20america.png" alt="Chaveiro Capitão América" class="chaveiro-img" loading="lazy">
-                    <img src="./Fotos/Chaveiros/Flecha.png" alt="Chaveiro Flecha" class="chaveiro-img" loading="lazy">
+                    <p class="bonus-text">Como fazer Chaveirinhos dos Heróis que encantam a todos. Veja na próxima seção.</p>
                 </div>
 
                 <div class="cta-wrapper" style="margin-top: 28px;">
@@ -1067,6 +1122,39 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<!-- ===============================
+     3B. CHAVEIRINHOS (BÔNUS)
+     =============================== -->
+<section class="chaveiros-section" id="chaveiros">
+    <div class="container">
+        <div class="chaveiros-section-head reveal">
+            <span class="bonus-badge" style="margin-bottom:16px; display:inline-block;">🎁 BÔNUS INCLUSO</span>
+            <h2>Chaveirinhos dos Heróis<br>em <em>Feltro Sem Costura</em></h2>
+        </div>
+
+        <div class="chaveiros-big-grid reveal">
+            <img src="./Fotos/Chaveiros/batman.png"
+                 alt="Chaveiro Batman em feltro" class="chaveiro-big-img" loading="lazy">
+            <img src="./Fotos/Chaveiros/Ironman.png"
+                 alt="Chaveiro Iron Man em feltro" class="chaveiro-big-img" loading="lazy">
+            <img src="./Fotos/Chaveiros/Miranha.png"
+                 alt="Chaveiro Homem-Aranha em feltro" class="chaveiro-big-img" loading="lazy">
+            <img src="./Fotos/Chaveiros/Capitao%20america.png"
+                 alt="Chaveiro Capitão América em feltro" class="chaveiro-big-img" loading="lazy">
+            <img src="./Fotos/Chaveiros/Flecha.png"
+                 alt="Chaveiro Flecha em feltro" class="chaveiro-big-img" loading="lazy">
+        </div>
+
+        <div class="cta-wrapper reveal">
+            <a href="https://pay.hotmart.com/O106166138T?off=2khzi9i4&checkoutMode=10"
+               class="cta-btn" id="cta-chaveiros" data-cta="chaveiros">
+                🔥 QUERO APRENDER TUDO POR R$19,90
+            </a>
+            <span class="cta-micro" style="color:rgba(255,255,255,0.5);">bônus incluso · pagamento único · acesso imediato</span>
         </div>
     </div>
 </section>
