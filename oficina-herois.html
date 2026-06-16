@@ -367,7 +367,7 @@
            ============================================ */
         .cta-btn {
             display: block;
-            background: var(--red);
+            background: #22C55E;
             color: var(--white);
             font-family: var(--font-d);
             font-size: 20px;
@@ -376,20 +376,27 @@
             padding: 20px 36px;
             border-radius: var(--r-btn);
             cursor: pointer;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            transition: background 0.2s, box-shadow 0.2s;
             width: 100%;
             max-width: 460px;
             margin: 0 auto;
-            animation: pulse-red 2.8s ease-in-out infinite;
+            animation: cta-float 1.8s ease-in-out infinite;
         }
         .cta-btn:hover {
-            background: var(--red-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(212,43,43,0.55);
+            background: #16A34A;
+            animation-play-state: paused;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 36px rgba(34,197,94,0.65);
         }
-        @keyframes pulse-red {
-            0%,100% { box-shadow: 0 4px 18px rgba(212,43,43,0.4); }
-            50%      { box-shadow: 0 4px 28px rgba(212,43,43,0.65), 0 0 0 6px rgba(212,43,43,0.1); }
+        @keyframes cta-float {
+            0%, 100% {
+                transform: translateY(0);
+                box-shadow: 0 6px 22px rgba(34,197,94,0.5);
+            }
+            50% {
+                transform: translateY(-8px);
+                box-shadow: 0 18px 38px rgba(34,197,94,0.65), 0 0 0 8px rgba(34,197,94,0.12);
+            }
         }
         .cta-micro {
             display: block;
@@ -873,17 +880,8 @@
             margin-bottom: 4px;
         }
         .final .cta-btn {
-            background: var(--white);
-            color: var(--red);
-            animation: pulse-white 2.8s ease-in-out infinite;
-        }
-        .final .cta-btn:hover {
-            background: #F2F2F2;
-            transform: translateY(-2px);
-        }
-        @keyframes pulse-white {
-            0%,100% { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-            50%      { box-shadow: 0 4px 30px rgba(0,0,0,0.35), 0 0 0 6px rgba(255,255,255,0.18); }
+            background: #22C55E;
+            color: var(--white);
         }
         .final .cta-micro { color: rgba(255,255,255,0.6); }
 
@@ -1062,7 +1060,7 @@
                         <span style="text-decoration:line-through; color:rgba(255,255,255,0.4);">De R$97,00</span>
                         &nbsp;por apenas&nbsp;
                         <strong style="color:var(--yellow); font-size:14px;">R$19,90</strong>
-                        &nbsp;· pagamento único · acesso imediato
+                        &nbsp;· pagamento único
                     </span>
                 </div>
             </div>
@@ -1137,7 +1135,7 @@
             <a href="https://pay.hotmart.com/O106166138T?off=2khzi9i4&checkoutMode=10" class="cta-btn" id="cta-galeria" data-cta="galeria">
                 🔥 QUERO FAZER ESSES HERÓIS POR R$19,90
             </a>
-            <span class="cta-micro">pagamento único · acesso imediato</span>
+            <span class="cta-micro">pagamento único</span>
         </div>
     </div>
 </section>
@@ -1187,7 +1185,7 @@
                     <a href="https://pay.hotmart.com/O106166138T?off=2khzi9i4&checkoutMode=10" class="cta-btn" id="cta-aprende" data-cta="aprende">
                         🔥 QUERO APRENDER TUDO POR R$19,90
                     </a>
-                    <span class="cta-micro">pagamento único · acesso imediato</span>
+                    <span class="cta-micro">pagamento único</span>
                 </div>
             </div>
 
@@ -1223,7 +1221,7 @@
                class="cta-btn" id="cta-chaveiros" data-cta="chaveiros">
                 🔥 QUERO APRENDER TUDO POR R$19,90
             </a>
-            <span class="cta-micro" style="color:rgba(255,255,255,0.5);">bônus incluso · pagamento único · acesso imediato</span>
+            <span class="cta-micro" style="color:rgba(255,255,255,0.5);">bônus incluso · pagamento único</span>
         </div>
     </div>
 </section>
@@ -1320,7 +1318,7 @@
                 <a href="https://pay.hotmart.com/O106166138T?off=2khzi9i4&checkoutMode=10" class="cta-btn" id="cta-final" data-cta="final">
                     🔥 GARANTIR MINHA VAGA POR R$19,90
                 </a>
-                <span class="cta-micro">27 de Junho · 9h às 12h · pagamento único · acesso imediato</span>
+                <span class="cta-micro">27 de Junho · 9h às 12h · pagamento único</span>
             </div>
         </div>
     </div>
